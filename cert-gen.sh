@@ -1,2 +1,3 @@
 #!/bin/bash
-openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+mkdir certs
+openssl req -x509 -nodes -days 365eq -x509 -nodes -days 365 -newkey rsa:2048 -keyout certs/nginx.key -out certs/nginx.crt

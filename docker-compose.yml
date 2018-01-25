@@ -5,9 +5,11 @@ services:
         image: nginx:latest
         ports:
             - "80:80"
+            - "443:443"
         volumes:
             - ./code:/code
             - ./site.conf:/etc/nginx/conf.d/default.conf
+            - ./certs:/etc/certs
         networks:
             - code-network
     php:
